@@ -11,21 +11,22 @@ import java.time.LocalDate;
 @Entity
 @Builder
 @Data @NoArgsConstructor @AllArgsConstructor
+@Table(name = "PET")
 public class Pet {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
-    @Column(nullable = false)
+    @Column(nullable = false,name = "owner_id")
     private long ownerId;
-    @Column(nullable = false)
+    @Column(nullable = false,name = "name")
     private String name;
-    @Column(nullable = false)
+    @Column(nullable = false,name = "type")
     private String type;
-    @Column(nullable = false)
+    @Column(nullable = false,name = "gender")
     private String gender;
-    @Column(nullable = false)
+    @Column(nullable = false,name = "breed")
     private String breed;
-    @Column(nullable = false)
+    @Column(nullable = false,name = "birthdate")
     private LocalDate birthDate;
 
 }
